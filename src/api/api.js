@@ -3,7 +3,7 @@ const url = "http://localhost:8000";
 export const addphone = async (data) => {
   try {
     return await axios.post(`${url}/add`, data);
-  } catch (e) {
+  } catch (e) { 
     console.log(e.message);
   }
 };
