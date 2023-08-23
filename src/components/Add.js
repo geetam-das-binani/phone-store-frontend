@@ -18,7 +18,7 @@ export default function Add() {
     description: "",
     available: "",
     image: "",
-    available: "",
+  
   };
 
   const [phone, setPhone] = useState(initialValues);
@@ -27,11 +27,12 @@ export default function Add() {
   const navigate = useNavigate();
   const handleChange = (e) => {
     setPhone((prev) => {
-      return { ...prev, [e.target.name]: e.target.value, available: value };
+      return { ...prev, [e.target.name]: e.target.value };
     });
   };
   const addPhoneDetails = async () => {
-    await addphone(phone);
+    const newPhone = { ...phone, available: value };
+    await addphone(newPhone);
     setPhone(initialValues);
     navigate("/myphones");
   };
@@ -65,7 +66,7 @@ export default function Add() {
 
       <FormControl>
         <FormControlLabel
-          control={<Checkbox checked={value}  style={{ color: "white" }} />}
+          control={<Checkbox checked={value} style={{ color: "white" }} />}
           onChange={() => setValue(!value)}
           label="Available"
           style={{ color: "white" }}
