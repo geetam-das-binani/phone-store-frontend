@@ -7,7 +7,7 @@ export default function Myphone() {
 
   const getAllPhones = async () => {
     const response = await getPhones();
-    console.log(response);
+   
 
     setPhones(response.data);
   };
