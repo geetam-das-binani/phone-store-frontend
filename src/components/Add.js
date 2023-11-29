@@ -75,7 +75,7 @@ export default function Add() {
 
       <Button
         className="btn"
-        style={{ color: "black", background: "aqua", marginTop: ".5rem" }}
+        style={{ color: "black", background: "tomato", marginTop: ".5rem" }}
         onClick={addPhoneDetails}
         variant="contained"
       >
