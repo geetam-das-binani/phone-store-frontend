@@ -1,5 +1,5 @@
 import axios from "axios";
-const url = "http://localhost:3002";
+const url = "http://localhost:3002/api/v1";
 export const addphone = async (data) => {
   try {
     return await axios.post(`${url}/add`, data);
